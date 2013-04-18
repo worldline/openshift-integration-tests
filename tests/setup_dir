@@ -1,0 +1,11 @@
+rhc account logout
+
+echo "Login"
+expect << EOF
+  spawn rhc account
+  expect "Password:"
+  send -- "admin\r"
+  expect "Login:"
+  expect "admin"
+  expect eof
+EOF
