@@ -1,0 +1,24 @@
+# Please make sure StrictHostKeyChecking no in /etc/ssh/ssh_config
+rhc app delete mysqlapp --confirm || true
+
+expect << EOF
+  spawn rhc app create mysqlapp php-5.3 --no-git
+  expect "mysqlapp @ http://mysqlapp-ns.mymachine.me/"
+  expect eof
+EOF
+
+expect << EOF
+  spawn rhc add-cartridge mysql-5.1 --app mysqlapp
+  expect "Adding mysql-5.1 to application 'mysqlapp'"
+  expect "Sucess"
+  expect "MySQL 5.1 database added."
+  expect eof
+EOF
+
+expect << EOF
+  spawn rhc add-cartridge phpmyadmin --app mysqlapp
+  expect "Adding phpmyadmin-3.4 to application 'mysqlapp'"
+  expect "Sucess"
+  expect "phpMyAdmin 3.4 added"
+  expect eof
+EOF
