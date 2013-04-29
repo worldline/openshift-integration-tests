@@ -1,0 +1,13 @@
+# Please make sure StrictHostKeyChecking no in /etc/ssh/ssh_config
+rhc app delete python2app --confirm || true
+
+echo "print app"
+expect << EOF
+  spawn rhc app create python2app python-2.7 --no-git
+  expect "Creating application"
+  expect "done"
+  expect "DNS name to be available"
+  expect "done"
+  expect "python2app @ http://python2app-ns.mymachine.me/"
+  expect eof
+EOF
