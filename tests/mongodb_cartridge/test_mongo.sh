@@ -4,8 +4,8 @@ PASSWORD=`rhc app show mongodbapp |grep Password | awk '{print $NF}'`
 rhc port-forward mongodbapp &
 
 # http://stackoverflow.com/questions/360201/kill-background-process-when-shell-script-exit
-trap "kill 0" SIGINT SIGTERM EXIT
-sleep 5
+trap 'kill $(jobs -p)' SIGINT SIGTERM EXIT
+sleep 7
 
 PORT=`rhc-list-ports 2>&1 |grep "270" | head -n1 | cut -d: -f2`
 

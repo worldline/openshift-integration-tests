@@ -10,7 +10,7 @@ EOF
 expect << EOF
   spawn rhc add-cartridge mysql-5.1 --app mysqlapp
   expect "Adding mysql-5.1 to application 'mysqlapp'"
-  expect "Sucess"
+  expect "Success"
   expect "MySQL 5.1 database added."
   expect eof
 EOF
@@ -18,7 +18,7 @@ EOF
 expect << EOF
   spawn rhc add-cartridge phpmyadmin --app mysqlapp
   expect "Adding phpmyadmin-3.4 to application 'mysqlapp'"
-  expect "Sucess"
+  expect "Success"
   expect "phpMyAdmin 3.4 added"
   expect eof
 EOF

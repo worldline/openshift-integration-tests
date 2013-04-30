@@ -10,7 +10,7 @@ EOF
 expect << EOF
   spawn rhc add-cartridge mongodb-2.2 --app mongodbapp
   expect "Adding mongodb-2.2 to application 'mongodbapp'"
-  expect "Sucess"
+  expect "Success"
   expect "MongoDB 2.2 database added."
   expect eof
 EOF
