@@ -1,0 +1,17 @@
+# Please make sure StrictHostKeyChecking no in /etc/ssh/ssh_config
+rhc app delete mongodbapp --confirm || true
+
+expect << EOF
+  spawn rhc app create mongodbapp php-5.3 --no-git
+  expect "mongodbapp @ http://mongodbapp-ns.mymachine.me/"
+  expect eof
+EOF
+
+expect << EOF
+  spawn rhc add-cartridge mongodb-2.2 --app mongodbapp
+  expect "Adding mongodb-2.2 to application 'mongodbapp'"
+  expect "Sucess"
+  expect "MongoDB 2.2 database added."
+  expect eof
+EOF
+
