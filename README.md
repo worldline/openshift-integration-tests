@@ -6,6 +6,12 @@ It should print:
 
     Running tests
       tests/
+        mongodb_cartridge
+        ✓ test_mongo.sh
+
+        mysql_cartridge
+        ✓ test_phpmyadmin.sh
+
         node_cartridge
         ✓ test_app_show.sh
         ✓ test_apps.sh
@@ -14,9 +20,27 @@ It should print:
         ✓ test_tail.sh
         ✓ test_website.sh
 
+        perl_cartridge
+        ✓ test_website.sh
+
+        php_cartridge
+        ✓ test_website.sh
+
+        postgresql_cartridge
+        ✓ test_psql.sh
+
+        python2_cartridge
+        ✓ test_website.sh
+
+        python3_cartridge
+        ✓ test_website.sh
+
+        ruby_cartridge
+        ✓ test_website.sh
+
 
     Done
-    6 tests passed.
+    14 tests passed.
     0 tests failed.
 
 TODO add more tests
