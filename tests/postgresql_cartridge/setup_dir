@@ -1,0 +1,16 @@
+# Please make sure StrictHostKeyChecking no in /etc/ssh/ssh_config
+rhc app delete postgresqlapp --confirm || true
+
+expect << EOF
+  spawn rhc app create postgresqlapp php-5.3 --no-git
+  expect "postgresqlapp @ http://postgresqlapp-ns.mymachine.me/"
+  expect eof
+EOF
+
+expect << EOF
+  spawn rhc add-cartridge postgresql-8.4 --app postgresqlapp
+  expect "Adding postgresql-8.4 to application 'postgresqlapp'"
+  expect "Success"
+  expect "PostgreSQL 8.4 database added."
+  expect eof
+EOF
