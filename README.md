@@ -1,5 +1,12 @@
 # OpenShift Integration Tests
 
+## Setup
+
+    $ yum install expect
+    $ echo "        StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+## Use
+
     $ ./run tests
 
 It should print: 
