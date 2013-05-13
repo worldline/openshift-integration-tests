@@ -73,7 +73,7 @@ app-delete                authorization             cartridge-scale           do
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Filirom1@gmail.com
+Copyright (c) 2013 Atos Worldline
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
