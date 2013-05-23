@@ -7,6 +7,8 @@
 
 ## Use
 
+    $ git clone https://github.com/AtosWorldline/openshift-integration-tests.git
+    $ cd openshift-integration-tests
     $ ./run tests
 
 It should print: 
