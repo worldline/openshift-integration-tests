@@ -2,7 +2,7 @@ rhc app delete mysqlapp --confirm || true
 
 expect << EOF
   spawn rhc app create mysqlapp php-5.3 --no-git
-  expect "mysqlapp @ http://mysqlapp-ns.mymachine.me/"
+  expect "mysqlapp @ http://mysqlapp"
   expect eof
 EOF
 

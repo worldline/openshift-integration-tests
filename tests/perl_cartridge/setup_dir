@@ -7,6 +7,6 @@ expect << EOF
   expect "done"
   expect "DNS name to be available"
   expect "done"
-  expect "perlapp @ http://perlapp-ns.mymachine.me/"
+  expect "perlapp @ http://perlapp-"
   expect eof
 EOF

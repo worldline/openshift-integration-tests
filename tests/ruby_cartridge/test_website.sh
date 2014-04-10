@@ -1,1 +1,1 @@
-curl http://rubyapp-ns.mymachine.me/
+curl http://rubyapp-$NAMESPACE.$CLOUD_DOMAIN/

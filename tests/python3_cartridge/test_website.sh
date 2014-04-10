@@ -1,1 +1,1 @@
-curl http://python3app-ns.mymachine.me/
+curl http://python3app-$NAMESPACE.$CLOUD_DOMAIN/

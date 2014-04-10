@@ -7,6 +7,6 @@ expect << EOF
   expect "done"
   expect "DNS name to be available"
   expect "done"
-  expect "phpapp @ http://phpapp-ns.mymachine.me/"
+  expect "phpapp @ http://phpapp-"
   expect eof
 EOF

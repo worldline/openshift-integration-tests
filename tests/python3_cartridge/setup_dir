@@ -7,6 +7,6 @@ expect << EOF
   expect "done"
   expect "DNS name to be available"
   expect "done"
-  expect "python3app @ http://python3app-ns.mymachine.me/"
+  expect "python3app @ http://python3app-"
   expect eof
 EOF

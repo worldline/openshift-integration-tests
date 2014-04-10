@@ -7,6 +7,6 @@ expect << EOF
   expect "done"
   expect "DNS name to be available"
   expect "done"
-  expect "rubyapp @ http://rubyapp-ns.mymachine.me/"
+  expect "rubyapp @ http://rubyapp-"
   expect eof
 EOF

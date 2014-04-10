@@ -7,6 +7,6 @@ expect << EOF
   expect "done"
   expect "DNS name to be available"
   expect "done"
-  expect "nodeapp @ http://nodeapp-ns.mymachine.me/"
+  expect "nodeapp @ http://nodeapp-"
   expect eof
 EOF

@@ -23,5 +23,5 @@ echo "sleep 5s"
 sleep 5
 
 echo "curl website and check the new text is present"
-curl -s nodeapp-ns.mymachine.me | grep "Welcome to my OpenShift"
+curl -s nodeapp-$NAMESPACE.$CLOUD_DOMAIN | grep "Welcome to my OpenShift"
 

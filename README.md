@@ -9,7 +9,7 @@
 
     $ git clone https://github.com/AtosWorldline/openshift-integration-tests.git
     $ cd openshift-integration-tests
-    $ ./run tests
+    $ CLOUD_DOMAIN=mymachine.me NAMESPACE=ns ./run tests
 
 It should print: 
 

@@ -1,1 +1,1 @@
-curl http://nodeapp-ns.mymachine.me/
+curl http://nodeapp-$NAMESPACE.$CLOUD_DOMAIN/

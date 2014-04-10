@@ -1,1 +1,1 @@
-curl http://perlapp-ns.mymachine.me/
+curl http://perlapp-$NAMESPACE.$CLOUD_DOMAIN/

@@ -2,7 +2,7 @@ rhc app delete mongodbapp --confirm || true
 
 expect << EOF
   spawn rhc app create mongodbapp php-5.3 --no-git
-  expect "mongodbapp @ http://mongodbapp-ns.mymachine.me/"
+  expect "mongodbapp @ http://mongodbapp-"
   expect eof
 EOF
 

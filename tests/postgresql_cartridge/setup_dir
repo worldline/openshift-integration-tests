@@ -2,7 +2,7 @@ rhc app delete postgresqlapp --confirm || true
 
 expect << EOF
   spawn rhc app create postgresqlapp php-5.3 --no-git
-  expect "postgresqlapp @ http://postgresqlapp-ns.mymachine.me/"
+  expect "postgresqlapp @ http://postgresqlapp"
   expect eof
 EOF
 
