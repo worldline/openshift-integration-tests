@@ -1,0 +1,1 @@
+rhc app delete nodeapp --confirm || true

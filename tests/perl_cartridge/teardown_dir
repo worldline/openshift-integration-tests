@@ -1,0 +1,1 @@
+rhc app delete perlapp --confirm || true

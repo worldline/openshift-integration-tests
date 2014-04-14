@@ -9,6 +9,8 @@ sleep 7
 
 PORT=`rhc-list-ports 2>&1 |grep "270" | head -n1 | cut -d: -f2`
 
+PORT=27017
+
 expect << EOF
   spawn mongo --host localhost --port $PORT admin
   expect ">"

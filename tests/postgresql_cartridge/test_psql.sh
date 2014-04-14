@@ -1,13 +1,13 @@
-LOGIN=`rhc app show postgresqlapp    |grep Username | awk '{print $NF}'`
-PASSWORD=`rhc app show postgresqlapp |grep Password | awk '{print $NF}'`
+LOGIN=`rhc app show postgresqlapp | grep "Username:" | sed 's/\s*Username\:\s*//'`
+PASSWORD=`rhc app show postgresqlapp | grep "Password:" | sed 's/\s*Password\:\s*//'`
 
 rhc port-forward postgresqlapp &
 
-# http://stackoverflow.com/questions/360201/kill-background-process-when-shell-script-exit
+## http://stackoverflow.com/questions/360201/kill-background-process-when-shell-script-exit
 trap 'kill $(jobs -p)' SIGINT SIGTERM EXIT
 sleep 7
 
-PORT=`rhc-list-ports 2>&1 |grep "543" | head -n1 | cut -d: -f2`
+PORT=5432
 
 expect << EOF
   set timeout 3
